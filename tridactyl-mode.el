@@ -44,8 +44,11 @@
        (rx (or
             "autocmd"
             "bind"
+            "js"
+            "jsb"
             "quickmark"
             "set"
+            "unbind"
             )))
   (set (make-local-variable 'parse-sexp-lookup-properties) t)
   (set (make-local-variable 'syntax-propertize-function)
