@@ -39,6 +39,13 @@
 (define-derived-mode tridactyl-mode conf-space-mode "Tridactyl"
   "Major mode for editing tridactylrc file."
   (conf-mode-initialize "\"")
+  (set (make-local-variable 'conf-space-keywords)
+       (rx (or
+            "autocmd"
+            "bind"
+            "quickmark"
+            "set"
+            )))
   (set (make-local-variable 'parse-sexp-lookup-properties) t)
   (set (make-local-variable 'syntax-propertize-function)
        tridactyl-syntax-propertize-function))
