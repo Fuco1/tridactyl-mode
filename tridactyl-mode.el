@@ -39,6 +39,7 @@
 (define-derived-mode tridactyl-mode conf-space-mode "Tridactyl"
   "Major mode for editing tridactylrc file."
   (conf-mode-initialize "\"")
+  (modify-syntax-entry ?\; ".")
   (set (make-local-variable 'conf-space-keywords)
        (rx (or
             "autocmd"
